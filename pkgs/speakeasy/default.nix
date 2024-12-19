@@ -18,16 +18,16 @@ let
   };
 
   urlMap = {
-    i686-linux = "https://github.com/goreleaser/goreleaser/releases/download/v2.5.0/goreleaser_Linux_i386.tar.gz";
-    x86_64-linux = "https://github.com/goreleaser/goreleaser/releases/download/v2.5.0/goreleaser_Linux_x86_64.tar.gz";
-    armv7l-linux = "https://github.com/goreleaser/goreleaser/releases/download/v2.5.0/goreleaser_Linux_armv7.tar.gz";
-    aarch64-linux = "https://github.com/goreleaser/goreleaser/releases/download/v2.5.0/goreleaser_Linux_arm64.tar.gz";
-    x86_64-darwin = "https://github.com/goreleaser/goreleaser/releases/download/v2.5.0/goreleaser_Darwin_x86_64.tar.gz";
-    aarch64-darwin = "https://github.com/goreleaser/goreleaser/releases/download/v2.5.0/goreleaser_Darwin_arm64.tar.gz";
+    i686-linux = "https://github.com/speakeasy/speakeasy/releases/download/v2.5.0/speakeasy_Linux_i386.tar.gz";
+    x86_64-linux = "https://github.com/speakeasy/speakeasy/releases/download/v2.5.0/speakeasy_Linux_x86_64.tar.gz";
+    armv7l-linux = "https://github.com/speakeasy/speakeasy/releases/download/v2.5.0/speakeasy_Linux_armv7.tar.gz";
+    aarch64-linux = "https://github.com/speakeasy/speakeasy/releases/download/v2.5.0/speakeasy_Linux_arm64.tar.gz";
+    x86_64-darwin = "https://github.com/speakeasy/speakeasy/releases/download/v2.5.0/speakeasy_Darwin_x86_64.tar.gz";
+    aarch64-darwin = "https://github.com/speakeasy/speakeasy/releases/download/v2.5.0/speakeasy_Darwin_arm64.tar.gz";
   };
 in
 stdenvNoCC.mkDerivation {
-  pname = "goreleaser";
+  pname = "speakeasy";
   version = "2.5.0";
   src = fetchurl {
     url = urlMap.${system};
@@ -40,8 +40,8 @@ stdenvNoCC.mkDerivation {
 
   installPhase = ''
     mkdir -p $out/bin
-    cp -vr ./goreleaser $out/bin/goreleaser
-    installManPage ./manpages/goreleaser.1.gz
+    cp -vr ./speakeasy $out/bin/speakeasy
+    installManPage ./manpages/speakeasy.1.gz
     installShellCompletion ./completions/*
   '';
 
@@ -49,18 +49,16 @@ stdenvNoCC.mkDerivation {
 
   meta = {
     description = "Release engineering, simplified";
-    homepage = "https://goreleaser.com";
+    homepage = "https://speakeasy.com";
     license = lib.licenses.mit;
 
     sourceProvenance = [ lib.sourceTypes.binaryNativeCode ];
 
     platforms = [
-      "aarch64-darwin"
       "aarch64-linux"
-      "armv7l-linux"
-      "i686-linux"
-      "x86_64-darwin"
+      "aarch64-darwin"
       "x86_64-linux"
+      "x86_64-darwin"
     ];
   };
 }

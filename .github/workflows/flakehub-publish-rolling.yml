@@ -14,6 +14,6 @@ jobs:
       - uses: "DeterminateSystems/nix-installer-action@main"
       - uses: "DeterminateSystems/flakehub-push@main"
         with:
-          name: "goreleaser/nur"
+          name: "speakeasy/nur"
           rolling: true
           visibility: "public"

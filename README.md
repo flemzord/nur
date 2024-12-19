@@ -3,7 +3,7 @@
 **GoReleaser's [NUR](https://github.com/nix-community/NUR) repository**
 
 <!-- Remove this if you don't use github actions -->
-![Build and populate cache](https://github.com/goreleaser/nur/workflows/Build%20and%20populate%20cache/badge.svg)
+![Build and populate cache](https://github.com/speakeasy/nur/workflows/Build%20and%20populate%20cache/badge.svg)
 
 <!--
 Uncomment this if you use travis:
@@ -16,7 +16,7 @@ Uncomment this if you use travis:
 ## Installation
 
 Follow the instructions at [NUR](https://github.com/nix-community/NUR), using
-`github:goreleaser/nur` as the repository.
+`github:speakeasy-api/nur` as the repository.
 
 If you want to see a real life example for home-manager, you can check
 [this commit out](https://github.com/caarlos0/dotfiles.nix/commit/6e45e06de0434a276d0261b63b5022bb4b23a61a).k

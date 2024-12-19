@@ -14,6 +14,5 @@
   modules = import ./modules; # NixOS modules
   overlays = import ./overlays; # nixpkgs overlays
 
-  goreleaser = pkgs.callPackage ./pkgs/goreleaser { };
-  goreleaser-pro = pkgs.callPackage ./pkgs/goreleaser-pro { };
+  speakeasy = pkgs.callPackage ./pkgs/speakeasy { };
 }
